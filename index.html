@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đại học Quốc gia TP.HCM</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* MENU */
+nav {
+    background: #0d47a1;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to right, #1565c0, #42a5f5);
+    color: white;
+}
+
+/* CARD */
+.container {
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d47a1;
+}
+
+.more {
+    display: none;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0d47a1;
+    color: white;
+    margin-top: 30px;
+}
+</style>
+
+<script>
+function toggle(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+</head>
+<body>
+
+<nav>
+    <a href="#">Trang chủ</a>
+    <a href="#truong">Các trường</a>
+    <a href="#lienhe">Liên hệ</a>
+</nav>
+
+<header>
+    <h1>ĐẠI HỌC QUỐC GIA TP.HCM</h1>
+    <p>Hệ thống các trường thành viên</p>
+</header>
+
+<div class="container" id="truong">
+
+<div class="card">
+    <h2>ĐH Bách Khoa</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/HCMUT.jpg">
+    <p>Trường đào tạo kỹ thuật hàng đầu.</p>
+    <button onclick="toggle('bk')">Xem thêm</button>
+    <div class="more" id="bk">
+        <p>Đào tạo các ngành: Cơ khí, Điện - Điện tử, CNTT, Xây dựng...</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>ĐH Khoa học Tự nhiên</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/HCMUS.jpg">
+    <p>Đào tạo khoa học cơ bản và công nghệ.</p>
+    <button onclick="toggle('khtn')">Xem thêm</button>
+    <div class="more" id="khtn">
+        <p>Các ngành: Toán, Lý, Hóa, Sinh, CNTT, Khoa học dữ liệu...</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>ĐH Công nghệ Thông tin (UIT)</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/UIT.jpg">
+    <p>Chuyên sâu về Công nghệ thông tin.</p>
+    <button onclick="toggle('uit')">Xem thêm</button>
+    <div class="more" id="uit">
+<p>Các ngành: Khoa học máy tính, AI, An toàn thông tin...</p>
+    </div>
+</div>
+
+</div>
+
+<footer id="lienhe">
+    <p>Email: dhqg@example.com</p>
+    <p>Website được tạo bằng HTML + CSS + JavaScript</p>
+</footer>
+
+</body>
+</html>
